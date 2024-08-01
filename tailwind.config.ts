@@ -39,6 +39,8 @@ const config = {
       },
       colors: {
         primary: {
+          DEFAULT: "#301C4E",
+          dark: "#331B58",
           blue: "#3D81DF",
           purple: "#BB41E1",
         },
@@ -46,6 +48,7 @@ const config = {
         accent: {
           DEFAULT: "#FF3D61",
           light: "#FE7B38",
+          foreground: "#F8FAFC",
         },
       },
       fontSize: {
