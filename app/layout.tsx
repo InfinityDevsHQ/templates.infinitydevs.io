@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "$/components/ui/sonner";
 import Header from "./_components/header";
 import Footer from "$/components/gernal/footer";
+import { cn } from "$/lib/utils";
 
 const notoSans = Noto_Sans({
   subsets: ["latin"],
@@ -54,7 +55,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={notoSans.className}>
+      <body
+        className={cn(
+          notoSans.className,
+          "bg-[url('/templates-bg.png')] bg-cover"
+        )}
+      >
         <Header />
         {children}
         <Footer />
