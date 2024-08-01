@@ -4,4 +4,5 @@ type TemplateCard = {
   description: string;
   link: string;
   price: string | null;
+  imgUrl: string;
 };

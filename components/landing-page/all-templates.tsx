@@ -1,3 +1,4 @@
+import { Templates } from "$/constants";
 import TemplateCard from "./_components/template-card";
 
 export default function AllTemplates() {
@@ -7,13 +8,13 @@ export default function AllTemplates() {
         <h1 className="text-white text-xl lg:text-4xl font-bold">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-primary-purple">
             Our
-          </span>
+          </span>{" "}
           Templates
         </h1>
-        <div className="grid grid-cols-3 gap-16">
-          <TemplateCard />
-          <TemplateCard />
-          <TemplateCard />
+        <div className="grid lg:grid-cols-3 gap-16">
+          {Templates.map((template) => (
+            <TemplateCard template={template} key={template.id} />
+          ))}
         </div>
       </div>
     </section>

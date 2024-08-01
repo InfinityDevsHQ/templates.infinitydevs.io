@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function TemplateCard() {
+export default function TemplateCard({ template }: { template: TemplateCard }) {
   return (
     <article className="relative">
-      <Link href={"/"}>
+      <Link href={template.link}>
         <Image
-          src={"/templates/template-1.png"}
+          src={template.imgUrl}
           alt="Template Thumbnail"
           width={348}
           height={484}
@@ -17,11 +17,13 @@ export default function TemplateCard() {
           <div className="flex justify-between w-full text-accent-foreground">
             <div className="flex flex-col gap-2">
               <h3 className="font-bold text-lg uppercase self-start">
-                PORTFOLIO
+                {template.title}
               </h3>
-              <p className="text-xs">Next.js Template for Recruiters</p>
+              <p className="text-xs">{template.description}</p>
             </div>
-            <span className="font-bold text-lg">$ 50</span>
+            <span className="font-bold text-lg">
+              {template.price || "Free"}
+            </span>
           </div>
         </div>
       </Link>
