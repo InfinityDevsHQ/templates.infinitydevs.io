@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  overflow-x: hidden;
+  background-color: #1d1f2c;
+}
+
+.main-descriptions {
+  @apply text-sm md:text-base xl:text-lg 2xl:text-xl text-zinc-300 text-center;
+}
+.main-descriptions2 {
+  @apply text-sm md:text-base xl:text-lg 2xl:text-xl text-zinc-300;
+}
+.image-flex {
+  @apply flex flex-col gap-16;
+}
+.box-max-width {
+  max-width: 1000px;
+}
+@media (min-width: 1650px) {
+  .box-max-width {
+    max-width: 1500px;
+  }
+}
+@media (min-width: 2000px) {
+  .box-max-width {
+    max-width: 2000px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .main-descriptions {
+    width: 1000px;
+  }
+}
+@media (min-width: 1536px) and (max-width: 2000px) {
+  .main-descriptions {
+    width: 1000px;
+  }
+}
+
+@media (min-width: 310px) and (max-width: 430px) {
+  .strap {
+    height: 25px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .strap {
+    font-size: 9px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: 325px) {
+  .strap {
+    font-size: 8px;
+    line-height: 16px;
+  }
+}
+
+.common-gradient {
+  background-image: linear-gradient(to right, #3d81df, #834ad8, #bb41e1);
+}
+.common-border {
+  border: 1px solid transparent;
+  background: linear-gradient(#11224f, #11224f) padding-box,
+    linear-gradient(to right, #3d81df, #834ad8, #bb41e1) border-box;
+}
+
+.common-border1 {
+  border: 1px solid #aba9ac;
+  background: linear-gradient(#d0d0d2, #d0d0d2) padding-box;
+  /* linear-gradient(to right, #3d81df, #834ad8, #bb41e1) border-box; */
+}
+
+.common-border3 {
+  border: 4px solid transparent;
+  box-shadow: #292929;
+  background: linear-gradient(#11224f, #11224f) padding-box,
+    linear-gradient(to right, #3d81df, #834ad8, #bb41e1) border-box;
+}
+.strap {
+  @apply flex items-center uppercase w-full font-bold sm:h-6 md:h-max p-1.5 text-xs sm:text-xs md:text-base lg:text-xl common-border1 !rounded-none text-[#292929];
+}
+.gradient-text,
+h2 span {
+  background-image: linear-gradient(to right, #3d81df, #834ad8, #bb41e1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.2;
+}
+/* section {
+  margin-bottom: 2rem;
+} */
+
+.black-fade {
+  -webkit-mask-image: linear-gradient(#000, rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(#000, ☐ rgba(0, 0, 0, 0));
+}
+/* .height-hero {
+  height: 750px;
+} */
+
+.bg-color {
+  background: linear-gradient(to right, #ffffff 0%, #d9d9d9 50%, #ffffff 100%);
+}
+
+@media (max-width: 1024px) {
+  .black-fade {
+    mask-image: none;
+  }
+}
+
+/* Animation */
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+@keyframes cursor {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 8s steps(40, end);
+}
+.cursor {
+  animation: cursor 1s infinite;
+}
+
+.hero-bg {
+  background-image: url("../public/infinity_bg_pattern.png");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.work-bg {
+  background-image: none;
+}
+@media (min-width: 768px) {
+  .work-bg {
+    background-image: url("../public//infinity_logo_blured.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .work-bg-phone {
+    background-image: none;
+  }
+}
+.work-bg-phone {
+  background-image: url("../public//infinity_logo_blured.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.who-bg {
+  background-image: url("../public/infinity_bg_pattern.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.testimonials-bg {
+  background-image: url("../public/infinity_bg_pattern.png");
+  background-size: 120vw;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.card-h {
+  height: 480px;
+}
+
+.review-bg {
+  background-color: #834ad880;
+}

@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": "off",
+    "highest-available-document-mode": "off",
+    "apple-touch-icons": "off",
+    "axe/aria": [
+      "default",
+      {
+        "aria-required-attr": "off"
+      }
+    ]
+  }
+}
