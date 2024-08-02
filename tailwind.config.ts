@@ -49,6 +49,7 @@ const config = {
           DEFAULT: "#FF3D61",
           light: "#FE7B38",
           foreground: "#F8FAFC",
+          purple: "#AF74FF",
         },
       },
       fontSize: {
