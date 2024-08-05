@@ -123,7 +123,7 @@ export default function ContactForm() {
   return (
     <Form {...form}>
       <form
-        className="grid lg:grid-cols-2 gap-12 rounded-3xl bg-primary-blue/10 border border-blue-400/30 p-12 backdrop-blur shadow-md"
+        className="grid lg:grid-cols-2 gap-12 rounded-3xl bg-primary-blue/10 border border-blue-400/30 text-primary-foreground p-12 backdrop-blur-lg shadow-md"
         onSubmit={form.handleSubmit(onSubmit)}
       >
         <Timings />
@@ -139,7 +139,7 @@ export default function ContactForm() {
                     <Input
                       placeholder="John Doe"
                       {...field}
-                      className="placeholder:text-zinc-400 bg-primary-blue/10 border border-blue-900/30 outline-none !ring-0 ring-offset-transparent backdrop-blur drop-shadow"
+                      className="placeholder:text-accent-text bg-primary-blue/10 border border-blue-900/30 outline-none !ring-0 ring-offset-transparent backdrop-blur shadow-lg"
                     />
                   </FormControl>
                   <FormMessage />
@@ -159,7 +159,7 @@ export default function ContactForm() {
                     <Input
                       placeholder="someone@domain.com"
                       {...field}
-                      className="bg-primary-blue/10 placeholder:text-zinc-400 border border-blue-900/30 outline-none !ring-0 ring-offset-transparent backdrop-blur drop-shadow"
+                      className="bg-primary-blue/10 placeholder:text-accent-text border border-blue-900/30 outline-none !ring-0 ring-offset-transparent backdrop-blur shadow-lg"
                     />
                   </FormControl>
                   <FormMessage />
@@ -178,7 +178,7 @@ export default function ContactForm() {
                     <Textarea
                       placeholder="Type your message"
                       {...field}
-                      className="bg-primary-blue/10 placeholder:text-zinc-400 border border-blue-900/30 outline-none !ring-0 ring-offset-transparent backdrop-blur drop-shadow"
+                      className="bg-primary-blue/10 placeholder:text-accent-text border border-blue-900/30 outline-none !ring-0 ring-offset-transparent backdrop-blur shadow-lg"
                     />
                   </FormControl>
                   <FormMessage />
@@ -188,8 +188,8 @@ export default function ContactForm() {
           </div>
           <button
             type="submit"
-            aria-label="form-submit button"
-            className=" flex items-center gap-2 px-4 py-2 self-start bg-primary-blue/20 rounded-full"
+            aria-label="form submit button"
+            className="flex items-center gap-2 px-4 py-2 self-start bg-primary-blue/20 rounded-full"
           >
             SUBMIT
             {isLoading ? (

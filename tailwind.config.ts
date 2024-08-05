@@ -43,6 +43,7 @@ const config = {
           dark: "#331B58",
           blue: "#3D81DF",
           purple: "#BB41E1",
+          foreground: "#F5F7F6",
         },
         "light-velvet": "#834AD8",
         accent: {
