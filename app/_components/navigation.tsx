@@ -10,31 +10,23 @@ export default function DesktopNav({ className }: DesktopNavProps) {
     <nav className={`text-white text-lg capitalize ${className || ""}`}>
       <ol className="flex items-center justify-between gap-12 xl:gap-16 text-center">
         <li>
-          <button
-            type="button"
-            className="text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-primary"
-            onClick={() => smoothScroll({ sectionId: "about-us" })}
-          >
-            About Us
-          </button>
-        </li>
-        <li>
-          <button
-            type="button"
-            className="text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-primary"
-            onClick={() => smoothScroll({ sectionId: "Testimonials" })}
-          >
-            Testimonials
-          </button>
-        </li>
-        <li>
           <Link
-            href={"/portfolio"}
+            href={"https://infinitydevs.io/"}
             className="text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-primary"
           >
-            Portfolio
+            Home
           </Link>
         </li>
+        <li>
+          <button
+            type="button"
+            className="text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-primary"
+            onClick={() => smoothScroll({ sectionId: "templates" })}
+          >
+            Templates
+          </button>
+        </li>
+
         <li>
           <button
             type="button"

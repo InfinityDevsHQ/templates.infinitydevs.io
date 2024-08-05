@@ -26,8 +26,8 @@ export default function Header({ className }: HeaderProps) {
       <Link href={"/"}>
         <Image
           src={"/logo-light.png"}
-          width={200}
-          height={200}
+          width={237}
+          height={48}
           className="hidden lg:inline-block"
           alt="Infinity Devs Logo"
         />
@@ -73,26 +73,10 @@ export default function Header({ className }: HeaderProps) {
                   <nav className="flex items-center justify-center text-zinc-300 text-2xl capitalize font-bold h-full">
                     <ol className="h-full flex flex-col items-center justify-center gap-14 mb-24">
                       <li>
-                        <button
-                          type="button"
-                          onClick={() => {
-                            smoothScroll({ sectionId: "about-us" });
-                            setSidebarOpen(false);
-                          }}
-                        >
-                          About Us
-                        </button>
+                        <Link href={"https://infinitydevs.io/"}>Home</Link>
                       </li>
                       <li>
-                        <button
-                          type="button"
-                          onClick={() => {
-                            smoothScroll({ sectionId: "Testimonials" });
-                            setSidebarOpen(false);
-                          }}
-                        >
-                          Testimonials
-                        </button>
+                        <Link href={"#"}>Templates</Link>
                       </li>
                       <li>
                         <Link href={"/portfolio"}>Portfolio</Link>
