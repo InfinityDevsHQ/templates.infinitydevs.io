@@ -3,15 +3,15 @@ import Link from "next/link";
 import { Linkedin, Twitter, Instagram } from "lucide-react";
 export default function Footer() {
   return (
-    <footer className="px-5 py-8 mx-auto max-w-screen-2xl">
+    <footer className="p-8 mx-auto max-w-screen-2xl">
       <div className="p-12 rounded-3xl bg-gradient-to-r from-primary-blue/10 via-light-velvet/10 to-primary-purple/10">
-        <div className="flex flex-col gap-4 lg:flex-row items-center  justify-between border-b pb-4">
+        <div className="flex flex-col gap-4 lg:flex-row items-center  justify-between border-b-2 border-lines pb-4">
           <div className="flex items-center justify-center">
             <Image
               src={"/logo-light.png"}
               alt="Infinity Devs lOGO"
-              width={200}
-              height={200}
+              width={237}
+              height={48}
             />
           </div>
           {/* <DesktopNav /> */}
@@ -39,7 +39,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <p className="main-description text-zinc-300 text-center pt-4 text-sm lg:text-base">
+        <p className="main-description text-white text-center pt-5 lg:text-xl font-medium">
           Infinity Devs &copy; 2024, All Rights Reserved
         </p>
       </div>

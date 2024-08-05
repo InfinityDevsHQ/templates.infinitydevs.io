@@ -53,6 +53,9 @@ const config = {
           text: "#ABA9AC",
           heading: "#D0D0D2",
         },
+        lines: {
+          DEFAULT: "#383C52",
+        },
       },
       fontSize: {
         "primary-xl": "4rem",
