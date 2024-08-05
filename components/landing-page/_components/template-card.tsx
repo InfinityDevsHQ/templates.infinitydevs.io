@@ -9,7 +9,7 @@ export default function TemplateCard({ template }: { template: TemplateCard }) {
           src={template.imgUrl}
           alt="Template Thumbnail"
           width={348}
-          height={484}
+          height={485}
           className="w-full h-full object-fill"
         />
 
