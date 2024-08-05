@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function TemplateCard({ template }: { template: TemplateCard }) {
   return (
-    <article className="relative drop-shadow">
+    <article className="relative shadow-2xl">
       <Link href={template.link}>
         <Image
           src={template.imgUrl}
