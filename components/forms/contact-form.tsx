@@ -189,7 +189,7 @@ export default function ContactForm() {
           <button
             type="submit"
             aria-label="form-submit button"
-            className="bg-primary-blue/10 flex items-center gap-2 px-4 py-2 self-start common-border rounded-full"
+            className=" flex items-center gap-2 px-4 py-2 self-start bg-primary-blue/20 rounded-full"
           >
             SUBMIT
             {isLoading ? (

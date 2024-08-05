@@ -82,6 +82,13 @@ body {
   background: linear-gradient(#11224f, #11224f) padding-box,
     linear-gradient(to right, #3d81df, #834ad8, #bb41e1) border-box;
 }
+/* .common-btn-border {
+  border: 4px solid transparent;
+  box-shadow: #292929;
+  background: linear-gradient(rgb(61, 129, 223, 20%), rgb(61, 129, 223, 20%))
+      padding-box,
+    linear-gradient(to right, #3d81df, #834ad8, #bb41e1) border-box;
+} */
 .strap {
   @apply flex items-center uppercase w-full font-bold sm:h-6 md:h-max p-1.5 text-xs sm:text-xs md:text-base lg:text-xl common-border1 !rounded-none text-[#292929];
 }
