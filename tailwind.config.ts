@@ -58,6 +58,11 @@ const config = {
           DEFAULT: "#383C52",
         },
       },
+      color: {
+        blue: "#3d81df",
+        "light-velvet": "#834AD8",
+        purple: "#BB41E1",
+      },
       fontSize: {
         "primary-xl": "4rem",
       },

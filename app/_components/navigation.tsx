@@ -8,7 +8,7 @@ export type DesktopNavProps = {
 export default function DesktopNav({ className }: DesktopNavProps) {
   return (
     <nav className={`text-white text-lg capitalize ${className || ""}`}>
-      <ol className="flex items-center justify-between gap-12 xl:gap-16 text-center">
+      <ol className="flex items-center justify-between gap-12 text-center">
         <li>
           <Link
             href={"https://infinitydevs.io/"}
