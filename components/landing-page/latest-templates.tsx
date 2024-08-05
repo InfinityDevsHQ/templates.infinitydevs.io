@@ -11,6 +11,7 @@ import {
   CarouselApi,
 } from "../ui/carousel";
 import TemplateCard from "./_components/template-card";
+import Link from "next/link";
 
 export default function LatestTemplates() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -31,13 +32,21 @@ export default function LatestTemplates() {
 
   return (
     <section className="py-16 p-6 relative mb-16">
+      <Link
+        className="absolute text-white text-xl font-medium right-12 uppercase"
+        href={"#"}
+      >
+        View all
+      </Link>
       <div className="max-w-screen-xl w-full mx-auto text-center flex flex-col gap-8">
-        <h1 className="text-white text-xl lg:text-4xl font-bold uppercase">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-primary-purple">
-            Latest
-          </span>{" "}
-          Templates
-        </h1>
+        <div className="uppercase">
+          <h1 className="text-white text-xl lg:text-4xl font-bold">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-primary-purple">
+              Latest
+            </span>{" "}
+            Templates
+          </h1>
+        </div>
         <Carousel
           setApi={setCarouselApi}
           className="max-h-[600px] max-w-[1167px] mx-auto -mt-11"

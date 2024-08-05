@@ -1,9 +1,16 @@
 import { Templates } from "$/constants";
+import Link from "next/link";
 import TemplateCard from "./_components/template-card";
 
 export default function AllTemplates() {
   return (
-    <section className="pt-16 pb-8 p-6" id="templates">
+    <section className="pt-16 pb-8 p-6 relative" id="templates">
+      <Link
+        className="absolute text-white text-xl font-medium right-12 uppercase"
+        href={"#"}
+      >
+        View all
+      </Link>
       <div className="max-w-screen-xl w-full mx-auto text-center flex flex-col gap-8">
         <h1 className="text-white text-xl lg:text-4xl font-bold uppercase">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-primary-purple">
