@@ -123,7 +123,7 @@ export default function ContactForm() {
   return (
     <Form {...form}>
       <form
-        className="grid lg:grid-cols-2 gap-12 bg-indigo-900/10 border rounded-3xl border-blue-400/30 text-zinc-300 px-6 py-4"
+        className="grid lg:grid-cols-2 gap-12border rounded-3xl bg-primary-blue/10 border border-blue-400/30 text-zinc-300 p-12 backdrop-blur drop-shadow"
         onSubmit={form.handleSubmit(onSubmit)}
       >
         <Timings />
@@ -139,7 +139,7 @@ export default function ContactForm() {
                     <Input
                       placeholder="John Doe"
                       {...field}
-                      className="bg-blue-900/40 placeholder:text-zinc-400 border border--white/30 outline-none !ring-0 ring-offset-transparent"
+                      className="placeholder:text-zinc-400 bg-primary-blue/10 border border-blue-900/30 outline-none !ring-0 ring-offset-transparent backdrop-blur drop-shadow"
                     />
                   </FormControl>
                   <FormMessage />
@@ -159,7 +159,7 @@ export default function ContactForm() {
                     <Input
                       placeholder="someone@domain.com"
                       {...field}
-                      className="bg-blue-900/40 placeholder:text-zinc-400 border border--white/30 outline-none !ring-0 ring-offset-transparent"
+                      className="bg-primary-blue/10 placeholder:text-zinc-400 border border-blue-900/30 outline-none !ring-0 ring-offset-transparent backdrop-blur drop-shadow"
                     />
                   </FormControl>
                   <FormMessage />
@@ -178,7 +178,7 @@ export default function ContactForm() {
                     <Textarea
                       placeholder="Type your message"
                       {...field}
-                      className="bg-blue-900/40 placeholder:text-zinc-400 border border--white/30 outline-none !ring-0 ring-offset-transparent"
+                      className="bg-primary-blue/10 placeholder:text-zinc-400 border border-blue-900/30 outline-none !ring-0 ring-offset-transparent backdrop-blur drop-shadow"
                     />
                   </FormControl>
                   <FormMessage />
@@ -189,7 +189,7 @@ export default function ContactForm() {
           <button
             type="submit"
             aria-label="form-submit button"
-            className="bg-blue-900/40 flex items-center gap-2 px-4 py-2 self-start common-border rounded-full"
+            className="bg-primary-blue/10 flex items-center gap-2 px-4 py-2 self-start common-border rounded-full"
           >
             SUBMIT
             {isLoading ? (
