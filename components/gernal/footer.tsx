@@ -4,7 +4,7 @@ import { Linkedin, Twitter, Instagram } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="px-5 py-8 mx-auto max-w-screen-2xl">
-      <div className="p-12 common-border3 rounded-3xl bg-gradient-to-tr from-primary-blue via-light-velvet to-primary-purple">
+      <div className="p-12 rounded-3xl bg-gradient-to-r from-primary-blue/10 via-light-velvet/10 to-primary-purple/10">
         <div className="flex flex-col gap-4 lg:flex-row items-center  justify-between border-b pb-4">
           <div className="flex items-center justify-center">
             <Image
