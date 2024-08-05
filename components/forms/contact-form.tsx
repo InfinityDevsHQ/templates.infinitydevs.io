@@ -123,7 +123,7 @@ export default function ContactForm() {
   return (
     <Form {...form}>
       <form
-        className="grid lg:grid-cols-2 gap-12border rounded-3xl bg-primary-blue/10 border border-blue-400/30 text-zinc-300 p-12 backdrop-blur drop-shadow"
+        className="grid lg:grid-cols-2 gap-12 rounded-3xl bg-primary-blue/10 border border-blue-400/30 text-zinc-300 p-12 backdrop-blur drop-shadow"
         onSubmit={form.handleSubmit(onSubmit)}
       >
         <Timings />

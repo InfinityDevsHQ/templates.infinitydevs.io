@@ -50,6 +50,8 @@ const config = {
           light: "#FE7B38",
           foreground: "#F8FAFC",
           purple: "#AF74FF",
+          text: "#ABA9AC",
+          heading: "#D0D0D2",
         },
       },
       fontSize: {
