@@ -31,14 +31,14 @@ export default function LatestTemplates() {
   }, [carouselApi]);
 
   return (
-    <section className="py-16 p-6 relative mb-16">
+    <section className="py-16 p-6 relative mb-32 lg:mb-16">
       <Link
         className="absolute text-white text-xl font-medium right-12 uppercase"
         href={"#"}
       >
         View all
       </Link>
-      <div className="max-w-screen-xl w-full mx-auto text-center flex flex-col gap-8">
+      <div className="max-w-screen-xl w-full mx-auto text-center flex flex-col gap-16 lg:gap-8">
         <div className="uppercase">
           <h1 className="text-white text-xl lg:text-4xl font-bold">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-primary-purple">
@@ -56,8 +56,8 @@ export default function LatestTemplates() {
               <CarouselItem
                 className={`lg:basis-1/4 transition-transform duration-300 ${
                   index === selectedIndex + 1
-                    ? "lg:basis-1/2 scale-90"
-                    : "scale-85"
+                    ? "lg:basis-1/2 lg:scale-90"
+                    : "lg:scale-85"
                 }`}
                 key={template.id}
               >
