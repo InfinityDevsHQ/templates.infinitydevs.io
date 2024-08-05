@@ -56,8 +56,8 @@ export default function LatestTemplates() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselNext className="right-10 !h-12 !w-12 bg-accent-purple/50 border-none text-slate-50" />
-          <CarouselPrevious className="left-10 !h-12 !w-12 bg-accent-purple/50 text-slate-50 border-none" />
+          <CarouselNext className="right-10 !h-12 !w-12 bg-accent-purple/50 border-none text-slate-50 mt-11" />
+          <CarouselPrevious className="left-10 !h-12 !w-12 bg-accent-purple/50 text-slate-50 border-none mt-11" />
         </Carousel>
       </div>
     </section>
