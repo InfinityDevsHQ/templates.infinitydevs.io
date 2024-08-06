@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function TemplateCard({ template }: { template: TemplateCard }) {
   return (
     <article className="relative shadow-2xl">
-      <Link href={template.link}>
+      <Link href={`/checkout/${template.id}`}>
         <Image
           src={template.imgUrl}
           alt="Template Thumbnail"
