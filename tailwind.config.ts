@@ -36,6 +36,7 @@ const config = {
       },
       spacing: {
         container: "500px",
+        70: "560px",
       },
       colors: {
         primary: {
