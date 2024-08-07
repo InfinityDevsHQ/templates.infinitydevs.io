@@ -53,7 +53,6 @@ export default function CardPaymentForm({
       email: "",
     },
   });
-  console.log(countries);
   return (
     <Form {...form}>
       <form>
@@ -84,7 +83,7 @@ export default function CardPaymentForm({
               value="card"
             >
               <span>
-                <CreditCard className="h-3 w-3" />
+                <CreditCard className="h-4 w-4  fill-current" stroke="white" />
               </span>
               <span className="pt-1 text-sm">Card</span>
             </TabsTrigger>
@@ -95,8 +94,8 @@ export default function CardPaymentForm({
               <span>
                 <Image
                   src={"/alipay.jpeg"}
-                  width={12}
-                  height={12}
+                  width={16}
+                  height={16}
                   alt="We chat pay logo"
                 />
               </span>
@@ -109,8 +108,8 @@ export default function CardPaymentForm({
               <span>
                 <Image
                   src={"/we-chat.png"}
-                  width={12}
-                  height={12}
+                  width={16}
+                  height={16}
                   alt="We chat pay logo"
                 />
               </span>
