@@ -39,6 +39,7 @@ const cardPaymentSchema = z.object({
     .min(16, { message: "Please enter a valid card number" })
     .optional(),
   cardExpiryDate: z.string().min(5).max(5).optional(),
+  securityCode: z.number().min(4),
 });
 
 export default function CardPaymentForm({
@@ -117,6 +118,73 @@ export default function CardPaymentForm({
             </TabsTrigger>
           </TabsList>
           <TabsContent value="card">
+            <FormField
+              control={form.control}
+              name="cardNumber"
+              render={({ field }) => (
+                <FormItem className="mb-6">
+                  <FormLabel className="mb-3 text-sm checkout-form-label">
+                    Card Number
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      min={16}
+                      maxLength={16}
+                      type="number"
+                      className="checkout-form-input"
+                      placeholder="1234 1234 1234 1234"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <div className="flex items-center gap-4">
+              <FormField
+                control={form.control}
+                name="cardExpiryDate"
+                render={({ field }) => (
+                  <FormItem className="mb-6 w-full">
+                    <FormLabel className="mb-3 text-sm checkout-form-label">
+                      Expiry Date
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        min={4}
+                        maxLength={4}
+                        className="checkout-form-input"
+                        placeholder="10/12"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="securityCode"
+                render={({ field }) => (
+                  <FormItem className="mb-6 w-full">
+                    <FormLabel className="mb-3 text-sm checkout-form-label">
+                      Security Code
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        min={4}
+                        max={4}
+                        type="number"
+                        className="checkout-form-input"
+                        placeholder="0000"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
             <FormField
               control={form.control}
               name="fullName"
