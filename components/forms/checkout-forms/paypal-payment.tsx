@@ -8,6 +8,13 @@ import {
   Form,
 } from "$/components/ui/form";
 import { Input } from "$/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "$/components/ui/select";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Lock } from "lucide-react";
 import { useForm } from "react-hook-form";
@@ -50,6 +57,50 @@ export default function PayPalPayment() {
             </FormItem>
           )}
         />
+        {/* Billing Address */}
+        <>
+          <FormField
+            control={form.control}
+            name="country"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Billing Address</FormLabel>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger className="!rounded-b-none">
+                      <SelectValue placeholder="Select Your Country" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="m@example.com">m@example.com</SelectItem>
+                    <SelectItem value="m@google.com">m@google.com</SelectItem>
+                    <SelectItem value="m@support.com">m@support.com</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="discountCode"
+            render={({ field }) => (
+              <FormItem className="mb-6">
+                <FormControl>
+                  <Input
+                    className="checkout-form-input !rounded-t-none"
+                    placeholder="Postal Code"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </>
         <FormField
           control={form.control}
           name="fullName"

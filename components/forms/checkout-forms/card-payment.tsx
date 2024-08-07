@@ -7,12 +7,21 @@ import {
   FormMessage,
   Form,
 } from "$/components/ui/form";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "$/components/ui/select";
+
 import { Input } from "$/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { CreditCard, Lock } from "lucide-react";
 import { z } from "zod";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "$/components/ui/tabs";
+import Image from "next/image";
 const cardPaymentSchema = z.object({
   email: z.string().email({ message: "Please enter a valid Email Address" }),
   fullName: z.string().min(1, { message: "Please Enter Your Name" }),
@@ -21,8 +30,7 @@ const cardPaymentSchema = z.object({
     .string()
     .min(1, { message: "Please Enter a discount code" })
     .optional(),
-  country: z.string(),
-  address: z.string(),
+  country: z.string({ message: "Please Select A Country" }),
   postalCode: z.string(),
 });
 
@@ -72,7 +80,12 @@ export default function CardPaymentForm() {
               value="alipay"
             >
               <span>
-                <CreditCard className="h-3 w-3" />
+                <Image
+                  src={"/alipay.jpeg"}
+                  width={12}
+                  height={12}
+                  alt="We chat pay logo"
+                />
               </span>
               <span className="pt-1 text-sm">Alipay</span>
             </TabsTrigger>
@@ -81,7 +94,12 @@ export default function CardPaymentForm() {
               value="we-chat-pay"
             >
               <span>
-                <CreditCard className="h-3 w-3" />
+                <Image
+                  src={"/we-chat.png"}
+                  width={12}
+                  height={12}
+                  alt="We chat pay logo"
+                />
               </span>
               <span className="pt-1 text-sm">WeChat Pay</span>
             </TabsTrigger>
@@ -139,6 +157,50 @@ export default function CardPaymentForm() {
           </TabsContent>
         </Tabs>
 
+        {/* Billing Address */}
+        <>
+          <FormField
+            control={form.control}
+            name="country"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Billing Address</FormLabel>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger className="!rounded-b-none">
+                      <SelectValue placeholder="Select Your Country" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="m@example.com">m@example.com</SelectItem>
+                    <SelectItem value="m@google.com">m@google.com</SelectItem>
+                    <SelectItem value="m@support.com">m@support.com</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="discountCode"
+            render={({ field }) => (
+              <FormItem className="mb-6">
+                <FormControl>
+                  <Input
+                    className="checkout-form-input !rounded-t-none"
+                    placeholder="Postal Code"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </>
         <FormField
           control={form.control}
           name="taxIdNumber"
@@ -161,8 +223,7 @@ export default function CardPaymentForm() {
           render={({ field }) => (
             <FormItem className="mb-6">
               <FormLabel className="mb-3 text-sm checkout-form-label">
-                Tax ID number{" "}
-                <span className="text-xs text-gray-500">(optional)</span>
+                Discount Code
               </FormLabel>
               <FormControl>
                 <Input className="checkout-form-input" {...field} />
@@ -171,6 +232,7 @@ export default function CardPaymentForm() {
             </FormItem>
           )}
         />
+
         <div className="my-6">
           <div className="flex items-center justify-center py-2">
             <span>Subtotal</span>
