@@ -40,7 +40,7 @@ export default function TemplateCheckout({
                 </div>
               </div>
               <div className="relative rounded-lg mb-8">
-                <div className="rounded-lg  flex items-center justify-center">
+                <div className="rounded-lg  flex items-center justify-center p-4 bg-gradient-to-r from-primary-blue via-light-velvet to-primary">
                   <Image
                     src={template?.imgUrl || ""}
                     width={448}
