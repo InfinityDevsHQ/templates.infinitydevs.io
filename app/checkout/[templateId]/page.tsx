@@ -13,7 +13,7 @@ export default function TemplateCheckout({
   );
   if (!template) return notFound();
   return (
-    <section className="w-full grid grid-cols-2 min-h-screen">
+    <section className="w-full grid lg:grid-cols-2 min-h-screen">
       <div className="bg-gray-300">
         <div className="mx-auto max-w-[512px] px-8 pb-12 pt-32 md:pb-32">
           <div>
