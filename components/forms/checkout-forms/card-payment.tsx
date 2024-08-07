@@ -149,7 +149,7 @@ export default function CardPaymentForm({
                   Supported cards include Visa, Mastercard, American Express,
                   Discover, Diners Club, JCB, UnionPay, and Elo.
                 </p>
-                <div className="flex w-12 h-5 z-50">
+                <div className="flex gap-0.5 w-12 h-5 z-50">
                   <div className="p-CardBrandIcons-item flex-1">
                     <svg
                       viewBox="0 0 24 16"
