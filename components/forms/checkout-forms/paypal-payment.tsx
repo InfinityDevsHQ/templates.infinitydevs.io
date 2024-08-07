@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "$/components/ui/button";
 import {
   FormField,
@@ -31,7 +32,11 @@ const paypalSchema = z.object({
   address: z.string(),
   postalCode: z.string(),
 });
-export default function PayPalPayment() {
+export default function PayPalPayment({
+  countries,
+}: {
+  countries: CountriesData[];
+}) {
   const form = useForm<z.infer<typeof paypalSchema>>({
     resolver: zodResolver(paypalSchema),
   });
@@ -75,9 +80,14 @@ export default function PayPalPayment() {
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="m@example.com">m@example.com</SelectItem>
-                    <SelectItem value="m@google.com">m@google.com</SelectItem>
-                    <SelectItem value="m@support.com">m@support.com</SelectItem>
+                    {countries.map((country) => (
+                      <SelectItem
+                        key={country.status}
+                        value={country.name.common}
+                      >
+                        {country.name.common}
+                      </SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
                 <FormMessage />

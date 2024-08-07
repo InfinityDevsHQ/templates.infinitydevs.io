@@ -1,9 +1,11 @@
-"use client";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import PayPalPayment from "./checkout-forms/paypal-payment";
 import CardPaymentForm from "./checkout-forms/card-payment";
+import { getAllCountries } from "$/lib/get-countries-data";
 
-export default function CheckoutForm() {
+export default async function CheckoutForm() {
+  const countries = await getAllCountries();
+  console.log(countries);
   return (
     <div className="bg-white">
       <div className="max-w-70 w-full mx-auto px-8 pb-20 pt-12 md:pt-32">
@@ -25,10 +27,10 @@ export default function CheckoutForm() {
                 </TabsTrigger>
               </TabsList>
               <TabsContent value="Pay by Card">
-                <CardPaymentForm />
+                <CardPaymentForm countries={countries} />
               </TabsContent>
               <TabsContent value="Pay With Paypal">
-                <PayPalPayment />
+                <PayPalPayment countries={countries} />
               </TabsContent>
             </Tabs>
           </div>

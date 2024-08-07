@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "$/components/ui/button";
 import {
   FormField,
@@ -34,7 +35,11 @@ const cardPaymentSchema = z.object({
   postalCode: z.string(),
 });
 
-export default function CardPaymentForm() {
+export default function CardPaymentForm({
+  countries,
+}: {
+  countries: CountriesData[];
+}) {
   const form = useForm<z.infer<typeof cardPaymentSchema>>({
     resolver: zodResolver(cardPaymentSchema),
     defaultValues: {
@@ -175,9 +180,14 @@ export default function CardPaymentForm() {
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="m@example.com">m@example.com</SelectItem>
-                    <SelectItem value="m@google.com">m@google.com</SelectItem>
-                    <SelectItem value="m@support.com">m@support.com</SelectItem>
+                    {countries.map((country) => (
+                      <SelectItem
+                        key={country.status}
+                        value={country.name.common}
+                      >
+                        {country.name.common}
+                      </SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
                 <FormMessage />
