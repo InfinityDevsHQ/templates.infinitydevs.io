@@ -120,7 +120,7 @@ h2 span {
   @apply appearance-none rounded-lg w-full bg-white text-sm leading-6 px-4 py-2 shadow-sm !ring-violet-600;
 }
 .checkout-form-label {
-  @apply cursor-pointer block font-medium;
+  @apply cursor-pointer block font-medium text-gray-800;
 }
 
 input::-webkit-outer-spin-button,

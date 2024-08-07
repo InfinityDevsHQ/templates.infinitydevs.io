@@ -124,7 +124,7 @@ export default function CardPaymentForm({
                 name="cardNumber"
                 render={({ field }) => (
                   <FormItem className="mb-6">
-                    <FormLabel className="mb-3 text-sm checkout-form-label">
+                    <FormLabel className="mb-3 text-sm checkout-form-label text-gray-800">
                       Card Number
                     </FormLabel>
                     <FormControl>
@@ -264,7 +264,7 @@ export default function CardPaymentForm({
                 name="cardExpiryDate"
                 render={({ field }) => (
                   <FormItem className="mb-6 w-full">
-                    <FormLabel className="mb-3 text-sm checkout-form-label">
+                    <FormLabel className="mb-3 text-sm checkout-form-label text-gray-800">
                       Expiry Date
                     </FormLabel>
                     <FormControl>
