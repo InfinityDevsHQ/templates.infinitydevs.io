@@ -182,7 +182,7 @@ export default function CardPaymentForm({
                   defaultValue={field.value}
                 >
                   <FormControl>
-                    <SelectTrigger className="!rounded-b-none">
+                    <SelectTrigger className="!rounded-b-none border-collapse focus:ring-0 focus:ring-offset-0 focus:border-zinc-950">
                       <SelectValue placeholder="Select Your Country" />
                     </SelectTrigger>
                   </FormControl>
@@ -203,12 +203,12 @@ export default function CardPaymentForm({
           />
           <FormField
             control={form.control}
-            name="discountCode"
+            name="postalCode"
             render={({ field }) => (
               <FormItem className="mb-6">
                 <FormControl>
                   <Input
-                    className="checkout-form-input !rounded-t-none"
+                    className="checkout-form-input !rounded-t-none border-collapse focus:!ring-0 focus:!ring-offset-0 focus:border-zinc-950"
                     placeholder="Postal Code"
                     {...field}
                   />
@@ -218,6 +218,7 @@ export default function CardPaymentForm({
             )}
           />
         </>
+
         <FormField
           control={form.control}
           name="taxIdNumber"

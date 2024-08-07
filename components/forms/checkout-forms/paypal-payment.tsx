@@ -75,7 +75,7 @@ export default function PayPalPayment({
                   defaultValue={field.value}
                 >
                   <FormControl>
-                    <SelectTrigger className="!rounded-b-none">
+                    <SelectTrigger className="!rounded-b-none focus:!ring-0 focus:!ring-offset-0 focus:border-zinc-950">
                       <SelectValue placeholder="Select Your Country" />
                     </SelectTrigger>
                   </FormControl>
@@ -101,7 +101,7 @@ export default function PayPalPayment({
               <FormItem className="mb-6">
                 <FormControl>
                   <Input
-                    className="checkout-form-input !rounded-t-none"
+                    className="checkout-form-input !rounded-t-none focus:!ring-0 focus:!ring-offset-0 focus:border-zinc-950"
                     placeholder="Postal Code"
                     {...field}
                   />
