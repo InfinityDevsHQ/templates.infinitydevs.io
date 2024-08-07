@@ -14,7 +14,7 @@ export default function TemplateCheckout({
   if (!template) return notFound();
   return (
     <section className="w-full grid lg:grid-cols-2 min-h-screen">
-      <div className="bg-gray-300">
+      <div className="bg-gray-50 text-gray-900">
         <div className="mx-auto max-w-[512px] px-8 pb-12 pt-32 md:pb-32">
           <div>
             <div className="mb-8">
@@ -24,7 +24,9 @@ export default function TemplateCheckout({
                 </h1>
                 <p className="ml-auto flex-shrink-1">
                   <span className="ml-2 text-xl">
-                    <span className="text-xl">{template?.price || "Free"}</span>
+                    <span className="text-xl text-gray-400 font-semibold">
+                      {template?.price || "Free"}
+                    </span>
                   </span>
                 </p>
               </div>
