@@ -96,9 +96,9 @@ export default function ContactForm() {
             </style>
           </head>
           <body>
-            <div class="container">
-              <div class="content">
-                <div class="header">
+            <div className="container">
+              <div className="content">
+                <div className="header">
                 <h1>
                   Thank you for reaching out to <br/> Infinity Devs!  
                 </h1>
