@@ -14,13 +14,13 @@ export default function CheckoutForm() {
             <Tabs defaultValue="Pay by Card" className="w-full">
               <TabsList className="w-full mb-8 0.5 rounded-lg">
                 <TabsTrigger
-                  className="w-1/2 py-1.5 px-4 text-sm"
+                  className="w-1/2 py-1.5 px-4 text-sm rounded-lg"
                   value="Pay by Card"
                 >
                   Pay by Card
                 </TabsTrigger>
                 <TabsTrigger
-                  className="w-1/2 py-1.5 px-4 text-sm"
+                  className="w-1/2 py-1.5 px-4 text-sm rounded-lg"
                   value="Pay With Paypal"
                 >
                   Pay With Paypal
