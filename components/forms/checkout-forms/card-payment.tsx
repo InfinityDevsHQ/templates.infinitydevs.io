@@ -34,6 +34,11 @@ const cardPaymentSchema = z.object({
     .optional(),
   country: z.string({ message: "Please Select A Country" }),
   postalCode: z.string(),
+  cardNumber: z
+    .number()
+    .min(16, { message: "Please enter a valid card number" })
+    .optional(),
+  cardExpiryDate: z.string().min(5).max(5).optional(),
 });
 
 export default function CardPaymentForm({
@@ -47,6 +52,7 @@ export default function CardPaymentForm({
       email: "",
     },
   });
+  console.log(countries);
   return (
     <Form {...form}>
       <form>

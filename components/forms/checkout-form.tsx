@@ -3,8 +3,8 @@ import PayPalPayment from "./checkout-forms/paypal-payment";
 import CardPaymentForm from "./checkout-forms/card-payment";
 import { getAllCountries } from "$/lib/get-countries-data";
 
-export default async function CheckoutForm() {
-  const countries = await getAllCountries();
+export default function CheckoutForm() {
+  const countries = getAllCountries();
   console.log(countries);
   return (
     <div className="bg-white">
