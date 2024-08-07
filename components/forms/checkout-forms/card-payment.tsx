@@ -23,6 +23,7 @@ import { CreditCard, Lock } from "lucide-react";
 import { z } from "zod";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "$/components/ui/tabs";
 import Image from "next/image";
+import RedirectionAlert from "../components/redirection-alert";
 const cardPaymentSchema = z.object({
   email: z.string().email({ message: "Please enter a valid Email Address" }),
   fullName: z.string().min(1, { message: "Please Enter Your Name" }),
@@ -127,6 +128,9 @@ export default function CardPaymentForm({
             />
           </TabsContent>
           <TabsContent value="alipay">
+            <div className="mb-8">
+              <RedirectionAlert logoUrl="/alipay.jpeg" selected="Alipay" />
+            </div>
             <FormField
               control={form.control}
               name="fullName"
@@ -144,6 +148,9 @@ export default function CardPaymentForm({
             />
           </TabsContent>
           <TabsContent value="we-chat-pay">
+            <div className="mb-8">
+              <RedirectionAlert logoUrl="/we-chat.png" selected="WeChat Pay" />
+            </div>
             <FormField
               control={form.control}
               name="fullName"
