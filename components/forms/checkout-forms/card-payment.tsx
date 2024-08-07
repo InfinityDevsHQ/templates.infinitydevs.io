@@ -60,7 +60,7 @@ export default function CardPaymentForm({
           control={form.control}
           name="email"
           render={({ field }) => (
-            <FormItem className="mb-6">
+            <FormItem className="mb-10">
               <FormLabel className="mb-3 text-sm checkout-form-label">
                 Email
               </FormLabel>
