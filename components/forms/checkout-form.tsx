@@ -8,7 +8,7 @@ export default function CheckoutForm() {
   console.log(countries);
   return (
     <div className="bg-white">
-      <div className="max-w-70 w-full mx-auto px-8 pb-20 pt-12 md:pt-32">
+      <div className="md:max-w-70 w-full mx-auto px-8 pb-20 pt-12 md:pt-32">
         <div>
           <div>
             <Tabs defaultValue="Pay by Card" className="w-full">

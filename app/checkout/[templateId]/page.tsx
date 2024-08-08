@@ -23,7 +23,7 @@ export default function TemplateCheckout({
           height={24}
         />
         <div className="bg-gray-50 text-gray-900">
-          <div className="mx-auto max-w-[512px] px-8 pb-12 pt-32 md:pb-32">
+          <div className="mx-auto sm:max-w-[400px] md:max-w-[512px] px-8 pb-12 pt-32 md:pb-32">
             <div>
               <div className="mb-8">
                 <div className="flex items-start">
@@ -50,7 +50,7 @@ export default function TemplateCheckout({
                 </div>
               </div>
               <div>
-                <div>
+                <div className="text-sm lg:text-base">
                   <p className="mb-4">{template?.description}</p>
                   <p>
                     Live Demo at{" "}
