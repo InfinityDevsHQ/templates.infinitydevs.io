@@ -5,7 +5,6 @@ import { getAllCountries } from "$/lib/get-countries-data";
 
 export default function CheckoutForm() {
   const countries = getAllCountries();
-  console.log(countries);
   return (
     <div className="bg-white">
       <div className="md:max-w-70 w-full mx-auto px-8 pb-20 pt-12 md:pt-32">
