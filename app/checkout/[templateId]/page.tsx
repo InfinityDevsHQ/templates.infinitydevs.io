@@ -16,7 +16,7 @@ export default function TemplateCheckout({
     <section>
       <div className="w-full grid lg:grid-cols-2 relative">
         <Image
-          src="/logo-light.png"
+          src="/logo-dark.png"
           alt="Infinity devs logo"
           className="ml-6 mt-6 absolute top-1 left-1"
           width={144}
