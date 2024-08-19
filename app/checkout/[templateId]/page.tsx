@@ -1,4 +1,5 @@
 import CheckoutForm from "$/components/forms/checkout-form";
+import FreeCheckoutForm from "$/components/forms/free-checkout-form";
 import { Templates } from "$/constants";
 import Image from "next/image";
 import Link from "next/link";
@@ -63,7 +64,8 @@ export default function TemplateCheckout({
             </div>
           </div>
         </div>
-        <CheckoutForm />
+        {/* <div onLoad={handleLoad}></div> */}
+        {template?.price === "Free" ? <FreeCheckoutForm /> : <CheckoutForm />}
       </div>
     </section>
   );
