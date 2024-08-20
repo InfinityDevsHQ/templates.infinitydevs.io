@@ -40,7 +40,7 @@ export default function LatestTemplates() {
       </Link>
       <div className="max-w-screen-xl w-full mx-auto text-center flex flex-col gap-16 lg:gap-8">
         <div className="uppercase">
-          <h1 className="text-white text-xl lg:text-4xl font-bold">
+          <h1 className="text-white text-xl lg:text-4xl font-bold ">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-primary-purple">
               Latest
             </span>{" "}
@@ -49,15 +49,13 @@ export default function LatestTemplates() {
         </div>
         <Carousel
           setApi={setCarouselApi}
-          className="max-h-[600px] max-w-[1167px] mx-auto -mt-11"
+          className="max-h-[600px] max-w-[1167px] mx-auto"
         >
           <CarouselContent className="items-center w-full h-full">
             {Templates.map((template, index) => (
               <CarouselItem
-                className={`lg:basis-1/4 duration-500 transition-all ${
-                  index === selectedIndex + 1
-                    ? "lg:basis-1/2 lg:scale-90"
-                    : "lg:scale-85"
+                className={`lg:basis-1/3 duration-300 transition-all lg:scale-75 ${
+                  index === selectedIndex + 1 ? " lg:!scale-100" : ""
                 }`}
                 key={template.id}
               >

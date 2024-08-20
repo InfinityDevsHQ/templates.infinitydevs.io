@@ -4,7 +4,7 @@ import TemplateCard from "./_components/template-card";
 
 export default function AllTemplates() {
   return (
-    <section className="pt-16 pb-8 p-6 relative" id="templates">
+    <section className=" pb-8 p-6 relative" id="templates">
       <Link
         className="absolute text-white text-xl font-medium right-12 uppercase"
         href={"#"}
