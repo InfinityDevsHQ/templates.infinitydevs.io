@@ -1,5 +1,4 @@
 import { Templates } from "$/constants";
-import Link from "next/link";
 import TemplateCard from "./_components/template-card";
 
 export default function AllTemplates() {

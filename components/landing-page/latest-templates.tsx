@@ -43,7 +43,7 @@ export default function LatestTemplates() {
         </div>
         <Carousel
           setApi={setCarouselApi}
-          className="max-h-[600px] max-w-[1167px] mx-auto -mt-11"
+          className="max-h-[600px] max-w-[1167px] mx-auto"
         >
           <CarouselContent className="items-center w-full h-full">
             {Templates.map((template, index) => (
