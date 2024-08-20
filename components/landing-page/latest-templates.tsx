@@ -48,7 +48,7 @@ export default function LatestTemplates() {
           <CarouselContent className="items-center w-full h-full">
             {Templates.map((template, index) => (
               <CarouselItem
-                className={`lg:basis-1/4 transition-transform duration-300 ${
+                className={`lg:basis-1/4 duration-500 transition-all ${
                   index === selectedIndex + 1
                     ? "lg:basis-1/2 lg:scale-90]"
                     : "lg:scale-85"
