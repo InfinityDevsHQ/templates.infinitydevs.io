@@ -65,7 +65,11 @@ export default function TemplateCheckout({
           </div>
         </div>
         {/* <div onLoad={handleLoad}></div> */}
-        {template?.price === "Free" ? <FreeCheckoutForm /> : <CheckoutForm />}
+        {template?.price === "Free" ? (
+          <FreeCheckoutForm template={template} />
+        ) : (
+          <CheckoutForm />
+        )}
       </div>
     </section>
   );
