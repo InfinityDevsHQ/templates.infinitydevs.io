@@ -1,4 +1,5 @@
 import CheckoutForm from "$/components/forms/checkout-form";
+import FreeCheckoutForm from "$/components/forms/free-checkout-form";
 import { Templates } from "$/constants";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,7 +17,7 @@ export default function TemplateCheckout({
     <section>
       <div className="w-full grid lg:grid-cols-2 relative">
         <Image
-          src="/logo-light.png"
+          src="/logo-dark.png"
           alt="Infinity devs logo"
           className="ml-6 mt-6 absolute top-1 left-1"
           width={144}
@@ -63,7 +64,12 @@ export default function TemplateCheckout({
             </div>
           </div>
         </div>
-        <CheckoutForm />
+        {/* <div onLoad={handleLoad}></div> */}
+        {template?.price === "Free" ? (
+          <FreeCheckoutForm template={template} />
+        ) : (
+          <CheckoutForm />
+        )}
       </div>
     </section>
   );

@@ -5,7 +5,7 @@ export const Templates: TemplateCard[] = [
     title: "Portfolio",
     description: "Next.js Template for Recruiters",
     link: "#",
-    price: "$ 50",
+    price: "Free",
   },
   {
     id: 2,
