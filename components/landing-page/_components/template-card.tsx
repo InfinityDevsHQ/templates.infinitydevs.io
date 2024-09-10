@@ -15,11 +15,7 @@ export default function TemplateCard({ template }: { template: TemplateCard }) {
     <article className="relative shadow-2xl">
       {isLoading ? (
         <span className="flex items-center justify-center">
-          <Loader
-            color="white"
-            size={100}
-            className="animate-spin fill-white"
-          />
+          <Loader color="white" size={40} className="animate-spin fill-white" />
         </span>
       ) : (
         <Link href={`/checkout/${template.id}`} onClick={handleClick}>
