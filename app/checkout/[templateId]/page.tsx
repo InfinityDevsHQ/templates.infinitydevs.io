@@ -16,24 +16,25 @@ export default function TemplateCheckout({
   return (
     <section>
       <div className="w-full grid lg:grid-cols-2 relative">
-        <Image
-          src="/logo-dark.png"
-          alt="Infinity devs logo"
-          className="ml-6 mt-6 absolute top-1 left-1"
-          width={144}
-          height={24}
-        />
-        <div className="bg-gray-50 text-gray-900">
-          <div className="mx-auto sm:max-w-[400px] md:max-w-[512px] px-8 pb-12 pt-32 md:pb-32">
+        <Link href="/" className="ml-6 mt-6 absolute top-1 left-1">
+          <Image
+            src="/logo-light.png"
+            alt="Infinity devs logo"
+            width={180}
+            height={24}
+          />
+        </Link>
+        <div className="bg-[url('/templates-bg.png')] bg-cover bg-no-repeat">
+          <div className="mx-auto sm:max-w-[400px] md:max-w-[512px] px-8 pb-12 pt-20 md:pb-8 md:pt-32">
             <div>
               <div className="mb-8">
                 <div className="flex items-start">
-                  <h1 className="text-2xl font-medium">
+                  <h1 className="text-2xl font-medium text-accent-foreground">
                     <span>{template?.title}</span>
                   </h1>
                   <p className="ml-auto flex-shrink-1">
                     <span className="ml-2 text-xl">
-                      <span className="text-xl text-gray-400 font-semibold">
+                      <span className="text-xl text-accent-foreground font-semibold">
                         {template?.price || "Free"}
                       </span>
                     </span>
@@ -51,11 +52,11 @@ export default function TemplateCheckout({
                 </div>
               </div>
               <div>
-                <div className="text-sm lg:text-base">
+                <div className="text-sm lg:text-base text-accent-foreground">
                   <p className="mb-4">{template?.description}</p>
                   <p>
                     Live Demo at{" "}
-                    <Link className="text-primary-blue" href={template?.link}>
+                    <Link className="text-accent-purple" href={template?.link}>
                       {template.link}
                     </Link>
                   </p>
