@@ -6,7 +6,7 @@ import { getAllCountries } from "$/lib/get-countries-data";
 export default function CheckoutForm() {
   const countries = getAllCountries();
   return (
-    <div className="bg-white">
+    <div className="bg-[url('/templates-bg.png')] bg-cover bg-no-repeat text-accent-foreground">
       <div className="md:max-w-70 w-full mx-auto px-8 pb-20 pt-12 md:pt-32">
         <div>
           <div>

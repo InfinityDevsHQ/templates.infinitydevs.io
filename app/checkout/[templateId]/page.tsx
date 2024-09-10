@@ -24,7 +24,7 @@ export default function TemplateCheckout({
             height={24}
           />
         </Link>
-        <div className="bg-[url('/templates-bg.png')] bg-cover bg-no-repeat">
+        <div className="bg-[#1d1f2c]">
           <div className="mx-auto sm:max-w-[400px] md:max-w-[512px] px-8 pb-12 pt-20 md:pb-8 md:pt-32">
             <div>
               <div className="mb-8">
