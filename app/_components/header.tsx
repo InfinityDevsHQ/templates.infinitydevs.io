@@ -31,7 +31,7 @@ export default function Header({ className }: HeaderProps) {
             <></>
           ) : (
             <header
-              className={`flex z-50 left-0 items-end justify-between bg-transparent w-full px-4 md:px-10 lg:px-12 py-4 lg:py-8 ${
+              className={`flex z-50 left-0 items-baseline justify-between bg-transparent w-full px-4 md:px-10 lg:px-12 py-4 lg:py-8 ${
                 pathname.includes(HeaderRoutes) && "md:hidden"
               } ${className}`}
             >
@@ -57,10 +57,10 @@ export default function Header({ className }: HeaderProps) {
                   <button
                     aria-label="Sidebar-menu-open-button"
                     type="button"
-                    className="text-white font-bold pt-1 mt-1"
+                    className="text-white font-bold"
                     onClick={() => setSidebarOpen(true)}
                   >
-                    <Menu className="w-full" />
+                    <Menu className="w-full size-5 mb-0.5 sm:size-6" />
                   </button>
                   <AnimatePresence>
                     {sidebarOpen && (
