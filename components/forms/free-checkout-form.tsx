@@ -33,7 +33,7 @@ export default function FreeCheckoutForm({
     } catch (error) {}
     const res = await sendMail({
       subject: `Free ${template.title} template request.`,
-      text: `Email: ${values?.email}\nMessage: I want the ${template.title} template fro free.`,
+      text: `Email: ${values?.email}\nMessage: I want the ${template.title} template for free.`,
     });
     console.log(res);
     if (res?.messageId) {
@@ -67,7 +67,7 @@ export default function FreeCheckoutForm({
                         <Input
                           placeholder="someone@domain.com"
                           {...field}
-                          className="w-full p-2.5 border rounded-lg mb-4 focus:outline-none focus:ring focus:ring-light-velvet"
+                          className="checkout-form-input mb-4"
                         />
                       </FormControl>
                       <FormMessage />
@@ -87,17 +87,20 @@ export default function FreeCheckoutForm({
                     <Send className="rotate-45" size={20} />
                   )}
                 </button>
-                <div className="flex justify-center space-x-2 mt-6 text-sm">
-                  <span>Powered by Lemon Squeezy</span>
-                  <span>·</span>
-
-                  <a href="#" className="hover:underline">
-                    Terms
-                  </a>
-                  <span>·</span>
-                  <a href="#" className="hover:underline">
-                    Privacy
-                  </a>
+                <div className="flex flex-col md:flex-row items-center gap-2 md:items-start justify-center space-x-2 mt-6 text-sm">
+                  <span>
+                    <span className="md:mr-2">Powered by Lemon Squeezy</span>
+                    <span>·</span>
+                  </span>
+                  <span>
+                    <a href="#" className="hover:underline">
+                      Terms
+                    </a>
+                    <span className="mx-2">·</span>
+                    <a href="#" className="hover:underline">
+                      Privacy
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>

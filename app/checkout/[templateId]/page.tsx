@@ -16,7 +16,10 @@ export default function TemplateCheckout({
   return (
     <section>
       <div className="w-full grid lg:grid-cols-2 relative">
-        <Link href="/" className="ml-6 mt-6 absolute top-1 left-1">
+        <Link
+          href="/"
+          className="ml-6 mt-6 absolute top-1 left-1 hidden md:block"
+        >
           <Image
             src="/logo-light.png"
             alt="Infinity devs logo"

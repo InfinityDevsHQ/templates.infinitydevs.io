@@ -25,17 +25,21 @@ export default function TemplateCard({ template }: { template: TemplateCard }) {
         </div>
       )}
 
-      <Link href={`/checkout/${template.id}`} onClick={handleClick}>
+      <Link
+        href={`/checkout/${template.id}`}
+        onClick={handleClick}
+        className="max-h-[650px] max-w-[1167px] lg:max-w-full lg:max-h-full w-fit"
+      >
         <Image
           src={template.imgUrl}
           alt="Template Thumbnail"
           width={850}
           height={990}
-          className="w-full h-full lg:max-h-[650px]"
+          className="w-fit h-full max-h-[650px] lg:max-h-full mx-auto"
           quality={100}
         />
 
-        <div className="flex items-center p-4 bg-gradient-to-r from-primary/90 to-primary-dark/90 absolute w-full bottom-0 left-0">
+        <div className="flex items-center p-4 bg-gradient-to-r from-primary/90 to-primary-dark/90 mx-auto absolute w-full sm:max-w-[494px] lg:max-w-full bottom-0 lg:left-0 left-0 translate-x-0 sm:left-1/2 sm:-translate-x-1/2 lg:translate-x-0">
           <div className="flex justify-between w-full text-accent-foreground">
             <div className="flex flex-col gap-2">
               <h3 className="font-bold text-lg uppercase self-start">

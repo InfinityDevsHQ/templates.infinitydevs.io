@@ -383,7 +383,7 @@ export default function CardPaymentForm({
                   defaultValue={field.value}
                 >
                   <FormControl>
-                    <SelectTrigger className="!rounded-b-none border-collapse text-accent-heading border-none bg-primary-dark focus:ring-0 focus:ring-offset-0 focus:border-primary">
+                    <SelectTrigger className="!rounded-b-none border-collapse text-accent-heading bg-primary-dark focus:ring-0 focus:ring-offset-0">
                       <SelectValue placeholder="Select Your Country" />
                     </SelectTrigger>
                   </FormControl>

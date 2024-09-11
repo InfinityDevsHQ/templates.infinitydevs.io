@@ -20,7 +20,8 @@ export default function Header({ className }: HeaderProps) {
     open: { x: 0 },
     closed: { x: "100%" },
   };
-  const NoHeaderRotes = ["/checkout"];
+  const NoHeaderRotes = ["/next"];
+  const HeaderRoutes = "/checkout";
 
   return (
     <>
@@ -30,7 +31,9 @@ export default function Header({ className }: HeaderProps) {
             <></>
           ) : (
             <header
-              className={`flex z-50 left-0 items-end justify-between bg-transparent w-full px-4 md:px-10 lg:px-12 py-4 lg:py-8 ${className}`}
+              className={`flex z-50 left-0 items-end justify-between bg-transparent w-full px-4 md:px-10 lg:px-12 py-4 lg:py-8 ${
+                pathname.includes(HeaderRoutes) && "md:hidden"
+              } ${className}`}
             >
               <Link href={"/"}>
                 <Image

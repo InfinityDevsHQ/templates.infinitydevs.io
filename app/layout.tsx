@@ -58,7 +58,7 @@ export default function RootLayout({
       <body
         className={cn(
           notoSans.className,
-          "bg-[url('/templates-bg.png')] bg-cover"
+          "bg-[url('/templates-bg.png')] bg-no-repeat bg-cover"
         )}
       >
         <Header />

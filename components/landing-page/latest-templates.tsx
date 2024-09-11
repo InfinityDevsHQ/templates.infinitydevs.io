@@ -31,20 +31,20 @@ export default function LatestTemplates() {
   }, [carouselApi]);
 
   return (
-    <section className="py-16 p-6 relative mb-32 lg:mb-16">
-      <div className="max-w-screen-xl w-full mx-auto text-center flex flex-col gap-16 lg:gap-8">
+    <section className="py-8 md:py-12 lg:py-16 p-6 relative lg:mb-16">
+      <div className="max-w-screen-xl w-full mx-auto text-center flex flex-col gap-12 lg:gap-8">
         <div className="uppercase">
-          <h1 className="text-white text-xl lg:text-4xl font-bold ">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-primary-purple">
+          <h1 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold ">
+            <span
+              style={{}}
+              className="bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-primary-purple"
+            >
               Latest
             </span>{" "}
             Templates
           </h1>
         </div>
-        <Carousel
-          setApi={setCarouselApi}
-          className="max-h-[600px] max-w-[1167px] mx-auto"
-        >
+        <Carousel setApi={setCarouselApi}>
           <CarouselContent className="items-center w-full h-full">
             {Templates.map((template, index) => (
               <CarouselItem
@@ -57,8 +57,8 @@ export default function LatestTemplates() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselNext className="right-10 !h-12 !w-12 bg-accent-purple/50 border-none text-slate-50 mt-11" />
-          <CarouselPrevious className="left-10 !h-12 !w-12 bg-accent-purple/50 text-slate-50 border-none mt-11" />
+          <CarouselNext className="hidden sm:flex right-10 !h-12 !w-12 bg-accent-purple/50 border-none text-slate-50 mt-11" />
+          <CarouselPrevious className="hidden sm:flex left-10 !h-12 !w-12 bg-accent-purple/50 text-slate-50 border-none mt-11" />
         </Carousel>
       </div>
     </section>
