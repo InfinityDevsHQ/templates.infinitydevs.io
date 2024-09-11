@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function TemplateCard({ template }: { template: TemplateCard }) {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const handleClick = () => {
     setIsLoading(true);
   };
@@ -31,7 +31,7 @@ export default function TemplateCard({ template }: { template: TemplateCard }) {
           alt="Template Thumbnail"
           width={348}
           height={485}
-          className="w-full h-full object-fill lg:max-h-[650px]"
+          className="w-full h-full lg:max-h-[650px]"
           quality={100}
         />
 
