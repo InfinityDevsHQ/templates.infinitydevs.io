@@ -47,6 +47,7 @@ export default function TemplateCheckout({
                     src={template?.imgUrl || ""}
                     width={448}
                     height={336}
+                    className="rounded-sm"
                     alt="Template Thumbnail"
                   />
                 </div>

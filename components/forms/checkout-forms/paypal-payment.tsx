@@ -75,11 +75,11 @@ export default function PayPalPayment({
                   defaultValue={field.value}
                 >
                   <FormControl>
-                    <SelectTrigger className="!rounded-b-none focus:!ring-0 focus:!ring-offset-0 focus:border-zinc-950">
+                    <SelectTrigger className="!rounded-b-none border-collapse text-accent-heading border-none bg-primary-dark focus:ring-0 focus:ring-offset-0 focus:border-primary">
                       <SelectValue placeholder="Select Your Country" />
                     </SelectTrigger>
                   </FormControl>
-                  <SelectContent>
+                  <SelectContent className="bg-primary rounded-lg text-accent-heading border-primary-dark">
                     {countries.map((country) => (
                       <SelectItem
                         key={country.status}

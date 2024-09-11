@@ -79,16 +79,16 @@ export default function CardPaymentForm({
         <Tabs className="mb-6" defaultValue="card">
           <TabsList className="bg-transparent w-full gap-2 mb-8">
             <TabsTrigger
-              className="flex-col p-3 border shadow-none border-gray-200 bg-white justify-start items-start w-full text-gray-600 data-[state=active]:text-violet-600 data-[state=active]:border-violet-600 rounded-lg"
+              className="flex-col p-3 border shadow-none border-primary/80 bg-primary/80 justify-start items-start w-full text-accent-heading data-[state=active]:text-violet-600 data-[state=active]:border-violet-600 rounded-lg"
               value="card"
             >
               <span>
-                <CreditCard className="h-4 w-4  fill-current" stroke="white" />
+                <CreditCard className="h-4 w-4 fill-current" stroke="white" />
               </span>
               <span className="pt-1 text-sm">Card</span>
             </TabsTrigger>
             <TabsTrigger
-              className="flex-col p-3 border shadow-none border-gray-200 bg-white justify-start items-start w-full text-gray-600 data-[state=active]:text-violet-600 data-[state=active]:border-violet-600 rounded-lg"
+              className="flex-col p-3 border shadow-none border-primary/80 bg-primary/80 justify-start items-start w-full text-accent-heading data-[state=active]:text-violet-600 data-[state=active]:border-violet-600 rounded-lg"
               value="alipay"
             >
               <span>
@@ -102,7 +102,7 @@ export default function CardPaymentForm({
               <span className="pt-1 text-sm">Alipay</span>
             </TabsTrigger>
             <TabsTrigger
-              className="flex-col p-3 border shadow-none border-gray-200 bg-white justify-start items-start w-full text-gray-600 data-[state=active]:text-violet-600 data-[state=active]:border-violet-600 rounded-lg"
+              className="flex-col p-3 border shadow-none border-primary/80 bg-primary/80 justify-start items-start w-full text-accent-heading data-[state=active]:text-violet-600 data-[state=active]:border-violet-600 rounded-lg"
               value="we-chat-pay"
             >
               <span>
@@ -356,7 +356,9 @@ export default function CardPaymentForm({
               render={({ field }) => (
                 <FormItem className="mb-6">
                   <FormLabel className="mb-3 text-sm checkout-form-label">
-                    Full Name
+                    <span className="text-xs text-accent-foreground">
+                      Full Name
+                    </span>
                   </FormLabel>
                   <FormControl>
                     <Input className="checkout-form-input" {...field} />
@@ -381,11 +383,11 @@ export default function CardPaymentForm({
                   defaultValue={field.value}
                 >
                   <FormControl>
-                    <SelectTrigger className="!rounded-b-none border-collapse text-primary focus:ring-0 focus:ring-offset-0 focus:border-zinc-950">
+                    <SelectTrigger className="!rounded-b-none border-collapse text-accent-heading border-none bg-primary-dark focus:ring-0 focus:ring-offset-0 focus:border-primary">
                       <SelectValue placeholder="Select Your Country" />
                     </SelectTrigger>
                   </FormControl>
-                  <SelectContent>
+                  <SelectContent className="bg-primary rounded-lg text-accent-heading border-primary-dark">
                     {countries.map((country) => (
                       <SelectItem
                         key={country.status}

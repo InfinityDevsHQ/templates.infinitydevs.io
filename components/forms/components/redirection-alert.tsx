@@ -9,7 +9,7 @@ export default function RedirectionAlert({
   selected: string;
 }) {
   return (
-    <section className="border border-gray-200 p-3">
+    <section className="border bg-primary border-primary rounded-lg p-3">
       <Image
         src={logoUrl}
         alt={selected}
@@ -17,10 +17,12 @@ export default function RedirectionAlert({
         height={30}
         className="mb-3"
       />
-      <p className="text-sm text-gray-800">{selected} selected</p>
+      <p className="text-sm text-accent-foreground">
+        {selected} <span className="text-accent-text"> (selected)</span>
+      </p>
       <div className="h-px bg-gray-100 my-3"></div>
       <div className="flex items-center text-xs">
-        <span className="mr-3 text-gray-700">
+        <span className="mr-3 text-accent-heading">
           <CardOutSvg />
         </span>
         <p>
