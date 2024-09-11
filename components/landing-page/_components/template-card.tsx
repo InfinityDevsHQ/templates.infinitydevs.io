@@ -14,7 +14,7 @@ export default function TemplateCard({ template }: { template: TemplateCard }) {
   return (
     <article className="relative shadow-2xl">
       {isLoading && (
-        <div className="absolute w-full h-full bg-black opacity-40">
+        <div className="absolute w-full h-full bg-black opacity-80">
           <span className="flex items-center justify-center absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2">
             <Loader
               color="white"
@@ -29,8 +29,8 @@ export default function TemplateCard({ template }: { template: TemplateCard }) {
         <Image
           src={template.imgUrl}
           alt="Template Thumbnail"
-          width={348}
-          height={485}
+          width={850}
+          height={990}
           className="w-full h-full lg:max-h-[650px]"
           quality={100}
         />
