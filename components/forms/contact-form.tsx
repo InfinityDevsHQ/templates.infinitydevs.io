@@ -123,11 +123,11 @@ export default function ContactForm() {
   return (
     <Form {...form}>
       <form
-        className="grid lg:grid-cols-2 gap-12 rounded-3xl bg-primary-blue/10 border border-blue-400/30 text-primary-foreground p-12 backdrop-blur-lg shadow-md"
+        className="grid lg:grid-cols-2 gap-8 lg:gap-12 rounded-3xl bg-primary-blue/10 border border-blue-400/30 text-primary-foreground px-2 py-8 md:p-8 lg:p-12 backdrop-blur-lg shadow-md"
         onSubmit={form.handleSubmit(onSubmit)}
       >
         <Timings />
-        <div className="uppercase flex flex-col gap-6">
+        <div className="uppercase flex flex-col gap-4 md:gap-6">
           <div className="flex flex-col gap-4">
             <Label htmlFor="name">Name *</Label>
             <FormField

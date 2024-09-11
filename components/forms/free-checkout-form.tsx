@@ -33,7 +33,7 @@ export default function FreeCheckoutForm({
     } catch (error) {}
     const res = await sendMail({
       subject: `Free ${template.title} template request.`,
-      text: `Email: ${values?.email}\nMessage: I want the ${template.title} template fro free.`,
+      text: `Email: ${values?.email}\nMessage: I want the ${template.title} template for free.`,
     });
     console.log(res);
     if (res?.messageId) {
@@ -43,15 +43,18 @@ export default function FreeCheckoutForm({
   }
   return (
     <Form {...form}>
-      <form className="bg-white" onSubmit={form.handleSubmit(onSubmit)}>
-        <div className="uppercase flex flex-col gap-6">
+      <form
+        className="bg-[url('/templates-bg.png')] bg-cover bg-no-repeat"
+        onSubmit={form.handleSubmit(onSubmit)}
+      >
+        <div className="uppercase flex flex-col gap-6 text-primary-foreground">
           <div className="md:max-w-2xl w-full mx-auto px-8 pb-20 pt-12 md:pt-32">
             <div className="flex flex-col h-fit  md:h-screen p-4">
               <div className="md:p-8 w-full">
                 <h2 className="text-2xl font-semibold text-center md:text-start mb-2">
                   Want this for free?
                 </h2>
-                <p className="text-lines text-center md:text-start mb-10">
+                <p className="text-center md:text-start mb-10">
                   Enter the email address we should send it to below.
                 </p>
 
@@ -64,7 +67,7 @@ export default function FreeCheckoutForm({
                         <Input
                           placeholder="someone@domain.com"
                           {...field}
-                          className="w-full p-2.5 border rounded-lg mb-4 focus:outline-none focus:ring-1 focus:ring-light-velvet"
+                          className="checkout-form-input mb-4"
                         />
                       </FormControl>
                       <FormMessage />
@@ -84,17 +87,20 @@ export default function FreeCheckoutForm({
                     <Send className="rotate-45" size={20} />
                   )}
                 </button>
-                <div className="flex justify-center space-x-2 mt-6 text-lines text-sm">
-                  <span>Powered by Lemon Squeezy</span>
-                  <span>·</span>
-
-                  <a href="#" className="hover:underline">
-                    Terms
-                  </a>
-                  <span>·</span>
-                  <a href="#" className="hover:underline">
-                    Privacy
-                  </a>
+                <div className="flex flex-col md:flex-row items-center gap-2 md:items-start justify-center space-x-2 mt-6 text-sm">
+                  <span>
+                    <span className="md:mr-2">Powered by Lemon Squeezy</span>
+                    <span>·</span>
+                  </span>
+                  <span>
+                    <a href="#" className="hover:underline">
+                      Terms
+                    </a>
+                    <span className="mx-2">·</span>
+                    <a href="#" className="hover:underline">
+                      Privacy
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>

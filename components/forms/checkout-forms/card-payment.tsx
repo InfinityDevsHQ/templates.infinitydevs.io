@@ -62,7 +62,7 @@ export default function CardPaymentForm({
           render={({ field }) => (
             <FormItem className="mb-10">
               <FormLabel className="mb-3 text-sm checkout-form-label">
-                Email
+                <span className="text-accent-foreground">Email</span>
               </FormLabel>
               <FormControl>
                 <Input
@@ -79,16 +79,16 @@ export default function CardPaymentForm({
         <Tabs className="mb-6" defaultValue="card">
           <TabsList className="bg-transparent w-full gap-2 mb-8">
             <TabsTrigger
-              className="flex-col p-3 border shadow-none border-gray-200 bg-white justify-start items-start w-full text-gray-600 data-[state=active]:text-violet-600 data-[state=active]:border-violet-600 rounded-lg"
+              className="flex-col p-3 border shadow-none border-primary/80 bg-primary/80 justify-start items-start w-full text-accent-heading data-[state=active]:text-violet-600 data-[state=active]:border-violet-600 rounded-lg"
               value="card"
             >
               <span>
-                <CreditCard className="h-4 w-4  fill-current" stroke="white" />
+                <CreditCard className="h-4 w-4 fill-current" stroke="white" />
               </span>
               <span className="pt-1 text-sm">Card</span>
             </TabsTrigger>
             <TabsTrigger
-              className="flex-col p-3 border shadow-none border-gray-200 bg-white justify-start items-start w-full text-gray-600 data-[state=active]:text-violet-600 data-[state=active]:border-violet-600 rounded-lg"
+              className="flex-col p-3 border shadow-none border-primary/80 bg-primary/80 justify-start items-start w-full text-accent-heading data-[state=active]:text-violet-600 data-[state=active]:border-violet-600 rounded-lg"
               value="alipay"
             >
               <span>
@@ -102,7 +102,7 @@ export default function CardPaymentForm({
               <span className="pt-1 text-sm">Alipay</span>
             </TabsTrigger>
             <TabsTrigger
-              className="flex-col p-3 border shadow-none border-gray-200 bg-white justify-start items-start w-full text-gray-600 data-[state=active]:text-violet-600 data-[state=active]:border-violet-600 rounded-lg"
+              className="flex-col p-3 border shadow-none border-primary/80 bg-primary/80 justify-start items-start w-full text-accent-heading data-[state=active]:text-violet-600 data-[state=active]:border-violet-600 rounded-lg"
               value="we-chat-pay"
             >
               <span>
@@ -123,8 +123,10 @@ export default function CardPaymentForm({
                 name="cardNumber"
                 render={({ field }) => (
                   <FormItem className="mb-6">
-                    <FormLabel className="mb-3 text-sm checkout-form-label text-gray-800">
-                      Card Number
+                    <FormLabel className="mb-3 text-sm checkout-form-label">
+                      <span className="text-accent-foreground">
+                        Card Number
+                      </span>
                     </FormLabel>
                     <FormControl>
                       <Input
@@ -263,8 +265,10 @@ export default function CardPaymentForm({
                 name="cardExpiryDate"
                 render={({ field }) => (
                   <FormItem className="mb-6 w-full">
-                    <FormLabel className="mb-3 text-sm checkout-form-label text-gray-800">
-                      Expiry Date
+                    <FormLabel className="mb-3 text-sm checkout-form-label">
+                      <span className="text-accent-foreground">
+                        Expiry Date
+                      </span>
                     </FormLabel>
                     <FormControl>
                       <Input
@@ -285,7 +289,9 @@ export default function CardPaymentForm({
                 render={({ field }) => (
                   <FormItem className="mb-6 w-full">
                     <FormLabel className="mb-3 text-sm checkout-form-label">
-                      Security Code
+                      <span className="text-accent-foreground">
+                        Security Code
+                      </span>
                     </FormLabel>
                     <FormControl>
                       <Input
@@ -308,7 +314,9 @@ export default function CardPaymentForm({
               render={({ field }) => (
                 <FormItem className="mb-6">
                   <FormLabel className="mb-3 text-sm checkout-form-label">
-                    Cardholder name
+                    <span className="text-accent-foreground">
+                      Cardholder name
+                    </span>
                   </FormLabel>
                   <FormControl>
                     <Input className="checkout-form-input" {...field} />
@@ -328,7 +336,7 @@ export default function CardPaymentForm({
               render={({ field }) => (
                 <FormItem className="mb-6">
                   <FormLabel className="mb-3 text-sm checkout-form-label">
-                    Full Name
+                    <span className="text-accent-foreground">Full Name</span>
                   </FormLabel>
                   <FormControl>
                     <Input className="checkout-form-input" {...field} />
@@ -348,7 +356,9 @@ export default function CardPaymentForm({
               render={({ field }) => (
                 <FormItem className="mb-6">
                   <FormLabel className="mb-3 text-sm checkout-form-label">
-                    Full Name
+                    <span className="text-xs text-accent-foreground">
+                      Full Name
+                    </span>
                   </FormLabel>
                   <FormControl>
                     <Input className="checkout-form-input" {...field} />
@@ -373,11 +383,11 @@ export default function CardPaymentForm({
                   defaultValue={field.value}
                 >
                   <FormControl>
-                    <SelectTrigger className="!rounded-b-none border-collapse focus:ring-0 focus:ring-offset-0 focus:border-zinc-950">
+                    <SelectTrigger className="!rounded-b-none border-collapse text-accent-heading bg-primary-dark focus:ring-0 focus:ring-offset-0">
                       <SelectValue placeholder="Select Your Country" />
                     </SelectTrigger>
                   </FormControl>
-                  <SelectContent>
+                  <SelectContent className="bg-primary rounded-lg text-accent-heading border-primary-dark">
                     {countries.map((country) => (
                       <SelectItem
                         key={country.status}
@@ -416,8 +426,10 @@ export default function CardPaymentForm({
           render={({ field }) => (
             <FormItem className="mb-6">
               <FormLabel className="mb-3 text-sm checkout-form-label">
-                Tax ID number{" "}
-                <span className="text-xs text-gray-500">(optional)</span>
+                <span className="text-accent-foreground">Tax ID number </span>
+                <span className="text-xs text-accent-foreground">
+                  (optional)
+                </span>
               </FormLabel>
               <FormControl>
                 <Input className="checkout-form-input" {...field} />
@@ -432,7 +444,7 @@ export default function CardPaymentForm({
           render={({ field }) => (
             <FormItem className="mb-6">
               <FormLabel className="mb-3 text-sm checkout-form-label">
-                Discount Code
+                <span className="text-accent-foreground">Discount Code</span>
               </FormLabel>
               <FormControl>
                 <Input className="checkout-form-input" {...field} />
@@ -442,7 +454,7 @@ export default function CardPaymentForm({
           )}
         />
 
-        <div className="my-6">
+        <div className="my-6 text-accent-foreground">
           <div className="flex items-center justify-center py-2">
             <span>Subtotal</span>
             <span className="ml-auto">$50</span>

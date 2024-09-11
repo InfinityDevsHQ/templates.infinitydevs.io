@@ -4,7 +4,7 @@ export default function CardOutSvg() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 48 40"
       role="presentation"
-      className="h-9 w-9 fill-gray-700"
+      className="h-9 w-9 fill-accent-foreground"
     >
       <path
         opacity=".6"
